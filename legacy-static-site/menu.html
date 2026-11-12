@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+(function () {
+  try {
+    var qs = new URLSearchParams(location.search).get("theme");
+    var t = qs === "light" || qs === "dark" ? qs : localStorage.getItem("wemw-theme");
+    if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+})();
+</script>
+<title>Menú | Wok Express Min Wah — Comida China en Chapala</title>
+<meta name="description" content="Consulta cómo conocer el menú actual de Wok Express Min Wah en Chapala: llama, escribe por WhatsApp o visita nuestra página de Facebook." />
+<link rel="canonical" href="/menu.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Wok Express Min Wah" />
+<meta property="og:title" content="Menú | Wok Express Min Wah" />
+<meta property="og:description" content="Comida china rápida para llevar en Chapala, Jalisco." />
+<meta property="og:image" content="assets/logo/logo-icon-512.png" />
+<meta property="og:locale" content="es_MX" />
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/logo/logo-icon-192.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "/" },
+    { "@type": "ListItem", "position": 2, "name": "Menú", "item": "/menu.html" }
+  ]
+}
+</script>
+</head>
+<body data-page="menu">
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+<div class="announce-bar" data-i18n="announce">Comida china rápida para llevar · Chapala, Jalisco · Pide por teléfono o WhatsApp</div>
+
+<header class="navbar">
+  <div class="navbar__inner">
+    <a class="navbar__brand" href="index.html" aria-label="Wok Express Min Wah — inicio">
+      <img src="assets/logo/logo-nav-360.png" alt="Wok Express Min Wah" width="120" height="96" />
+    </a>
+    <nav class="navbar__links" aria-label="Navegación principal">
+      <a href="index.html" data-i18n="nav_home">Inicio</a>
+      <a href="menu.html" aria-current="page" data-i18n="nav_menu">Menú</a>
+      <a href="index.html#como-ordenar" data-i18n="nav_order">Cómo ordenar</a>
+      <a href="contacto.html#ubicacion" data-i18n="nav_location">Ubicación</a>
+      <a href="contacto.html" data-i18n="nav_contact">Contacto</a>
+    </nav>
+    <div class="navbar__actions">
+      <a class="btn btn--outline btn--sm btn--outline-phone-text" href="tel:+523326314263">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-i18n="nav_call">33 2631 4263</span>
+      </a>
+      <a class="btn btn--primary btn--sm" href="https://wa.me/523326314263" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.94 9.94 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.8 14.3c-.24.68-1.4 1.3-1.93 1.37-.5.07-1.1.1-1.77-.11-.41-.13-.93-.3-1.6-.6-2.8-1.2-4.62-4-4.76-4.19-.14-.19-1.14-1.52-1.14-2.9s.72-2.05.98-2.33c.26-.28.56-.35.75-.35h.53c.17 0 .4-.03.62.48s.75 1.83.82 1.97c.07.14.11.3.02.49-.09.19-.14.3-.28.47s-.29.37-.42.5c-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.45.12.61-.07.17-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.26.09 1.62.77 1.9.9.28.14.46.21.53.32.07.12.07.66-.16 1.3z"/></svg>
+        <span data-i18n="nav_whatsapp">WhatsApp</span>
+      </a>
+      <span class="navbar__divider"></span>
+      <div class="tool-toggles">
+        <button class="theme-toggle" type="button" data-i18n-attr="aria-label:theme_toggle_aria" aria-label="Cambiar entre tema claro y oscuro">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+      <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="navbar__mobile-panel" aria-label="Navegación móvil">
+    <a href="index.html" data-i18n="nav_home">Inicio</a>
+    <a href="menu.html" data-i18n="nav_menu">Menú</a>
+    <a href="index.html#como-ordenar" data-i18n="nav_order">Cómo ordenar</a>
+    <a href="contacto.html#ubicacion" data-i18n="nav_location">Ubicación</a>
+    <a href="contacto.html" data-i18n="nav_contact">Contacto</a>
+    <a href="tel:+523326314263" class="btn btn--outline">Llamar: 33 2631 4263</a>
+    <div class="navbar__mobile-tools">
+      <button class="theme-toggle" type="button" data-i18n-attr="aria-label:theme_toggle_aria" aria-label="Cambiar entre tema claro y oscuro">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" style="padding-block: var(--space-7) var(--space-6);">
+    <div class="container" style="position:relative; z-index:1;">
+      <span class="hero__eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+        <span data-i18n="menu_eyebrow">Menú</span>
+      </span>
+      <h1 style="font-size: var(--fs-h1); color: var(--ivory);" data-i18n="menu_title">Nuestros platillos</h1>
+      <p class="hero__subtitle mt-0" data-i18n="menu_page_intro">Comida china preparada al wok en Chapala, Jalisco.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt" data-reveal>
+    <div class="container">
+      <div class="pending-panel">
+        <span class="pending-panel__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </span>
+        <div>
+          <h3 data-i18n="menu_page_panel_title">Estamos publicando nuestro menú digital</h3>
+          <p data-i18n="menu_page_panel_body">
+            Queremos mostrarte únicamente platillos, combos y precios que podamos confirmar como vigentes —
+            por eso esta sección se está completando con el menú real del restaurante. Mientras tanto, la forma
+            más rápida de conocer las opciones del día es contactarnos directamente.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--primary btn--sm" href="https://wa.me/523326314263" target="_blank" rel="noopener" data-i18n="menu_cta_whatsapp">Preguntar por WhatsApp</a>
+            <a class="btn btn--outline btn--sm" href="tel:+523326314263" data-i18n="menu_cta_call">Llamar al 33 2631 4263</a>
+            <a class="btn btn--outline btn--sm" href="https://www.facebook.com/profile.php?id=61579570480332" target="_blank" rel="noopener" data-i18n="menu_cta_fb">Ver publicaciones en Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    Estructura lista para el menú real (MenuSection / MenuItem).
+    Al recibir el contenido confirmado, reemplazar este comentario por
+    bloques .menu-category con .menu-item reales — no antes.
+  -->
+
+  <section class="section section--base" data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="gallery_eyebrow">Ambiente</span>
+        <h2 data-i18n="gallery_title">El wok, el fuego, la comida china para llevar</h2>
+        <p class="gallery-note" data-i18n="gallery_note">Fotografías ilustrativas del estilo de cocina al wok y comida china para llevar — no corresponden a instalaciones, personal o platillos específicos de Wok Express Min Wah.</p>
+      </div>
+      <div class="card-grid card-grid--3">
+        <figure class="photo photo--square">
+          <img src="assets/images/opt/mood-flaming-wok-1800.jpg" srcset="assets/images/opt/mood-flaming-wok-900.jpg 900w, assets/images/opt/mood-flaming-wok-1800.jpg 1800w" sizes="(max-width: 860px) 90vw, 30vw" alt="Wok con flama alta — imagen ilustrativa" loading="lazy" />
+        </figure>
+        <figure class="photo photo--square">
+          <img src="assets/images/opt/gallery-fried-rice-1800.jpg" srcset="assets/images/opt/gallery-fried-rice-900.jpg 900w, assets/images/opt/gallery-fried-rice-1800.jpg 1800w" sizes="(max-width: 860px) 90vw, 30vw" alt="Arroz salteado en sartén caliente — imagen ilustrativa" loading="lazy" />
+        </figure>
+        <figure class="photo photo--square">
+          <img src="assets/images/opt/gallery-takeout-boxes-1800.jpg" srcset="assets/images/opt/gallery-takeout-boxes-900.jpg 900w, assets/images/opt/gallery-takeout-boxes-1800.jpg 1800w" sizes="(max-width: 860px) 90vw, 30vw" alt="Cajas de comida para llevar — imagen ilustrativa" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light" data-reveal>
+    <div class="container text-center">
+      <span class="eyebrow" data-i18n="menu_page_cta_title">¿Ya sabes qué quieres pedir?</span>
+      <h2 style="margin-bottom: var(--space-4);" data-i18n="menu_page_cta_subtitle">Haznos tu pedido para llevar</h2>
+      <div class="btn-row" style="justify-content:center;">
+        <a class="btn btn--primary" href="https://wa.me/523326314263" target="_blank" rel="noopener" data-i18n="hero_cta_whatsapp">Ordenar por WhatsApp</a>
+        <a class="btn btn--outline" href="tel:+523326314263" data-i18n="hero_cta_call">Llamar ahora</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="assets/logo/logo-nav-360.png" alt="Wok Express Min Wah" width="150" height="120" />
+      <p data-i18n="footer_tagline">Comida china rápida en Chapala, Jalisco. Pedidos para llevar por teléfono o WhatsApp.</p>
+      <div class="footer__social">
+        <a href="https://www.facebook.com/profile.php?id=61579570480332" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 data-i18n="footer_nav_title">Navegación</h4>
+      <ul>
+        <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+        <li><a href="menu.html" data-i18n="nav_menu">Menú</a></li>
+        <li><a href="contacto.html" data-i18n="nav_contact">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-i18n="footer_contact_title">Contacto</h4>
+      <ul>
+        <li><a href="tel:+523326314263">33 2631 4263</a></li>
+        <li><a href="mailto:wokexpres01@gmail.com">wokexpres01@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61579570480332" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-i18n="footer_hours_title">Horario</h4>
+      <p style="font-size: var(--fs-sm); color: var(--band-fg-muted);" data-i18n="footer_hours_body">Por confirmar — llama o escribe por WhatsApp</p>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© <span id="year"></span> Wok Express Min Wah. <span data-i18n="footer_rights">Todos los derechos reservados.</span></span>
+    <span>Paseo Ramón Corona 8C, Chapala, Jalisco, México, 45900</span>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

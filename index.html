@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="google-site-verification" content="kZgdeWhzHOoCNBilHgrWbIubormNeaBpqAZ_QerTrHA" />
+<script>
+(function () {
+  try {
+    var qs = new URLSearchParams(location.search).get("theme");
+    var t = qs === "light" || qs === "dark" ? qs : localStorage.getItem("minwah-theme");
+    if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+})();
+</script>
+
+<title>Restaurant Min Wah | Auténtica Comida China en Ajijic, Jalisco</title>
+<meta name="description" content="Restaurant Min Wah: auténtica comida china estilo Szechuan, Mandarín y Cantonesa en Ajijic desde 1994. Mesa, para llevar y a domicilio. Reserva por WhatsApp." />
+<link rel="canonical" href="/" />
+
+<meta property="og:type" content="restaurant.restaurant" />
+<meta property="og:site_name" content="Restaurant Min Wah" />
+<meta property="og:title" content="Restaurant Min Wah | Comida China en Ajijic" />
+<meta property="og:description" content="Auténtica comida china en Ajijic desde 1994. Mesa, para llevar y a domicilio." />
+<meta property="og:locale" content="es_MX" />
+
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-minwah/favicon-minwah-32.png" />
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/logo-minwah/favicon-minwah-64.png" />
+<link rel="apple-touch-icon" href="/assets/logo-minwah/logo-minwah-256.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

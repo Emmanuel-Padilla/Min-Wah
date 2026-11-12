@@ -1,0 +1,351 @@
+@import "tailwindcss";
+
+/* =========================================================
+   RESTAURANT MIN WAH — design tokens. Paleta derivada del logo oficial:
+   rojo greca #B41C1C (suavizado), negro cálido #181818, oro del paisaje y crema.
+   Nav / Hero / Footer se quedan en la "banda" oscura; el resto sigue el
+   tema claro/oscuro vía [data-theme].
+
+   WOK EXPRESS — sitio independiente (/wok-express). Su paleta propia
+   (negro, rojo, dorado) vive en [data-brand="wok"] más abajo.
+   ========================================================= */
+
+:root {
+  --color-brand-black: #1e1717;
+  --color-brand-ink: #2a201e;
+  --color-brand-red: #ae2a26;
+  --color-brand-red-dark: #8a201d;
+  --color-brand-ivory: #faf5ea;
+  --color-brand-ivory-dim: #efe6d3;
+  --color-brand-ivory-muted: #d1c8b8;
+  --color-brand-gold: #c9a34c;
+  --color-brand-gold-soft: #e2c98c;
+
+  --band-bg: #221a19;
+  --band-bg-raised: #30241f;
+  --band-fg: var(--color-brand-ivory);
+  --band-fg-muted: var(--color-brand-ivory-muted);
+  --band-line: rgb(250 245 234 / 0.16);
+
+  --bg-base: #1b1514;
+  --bg-base-alt: #231b19;
+  --bg-base-raised: #2e2321;
+  --bg-pop: var(--color-brand-ivory);
+  --fg-base: var(--color-brand-ivory);
+  --fg-base-muted: var(--color-brand-ivory-muted);
+  --fg-pop: var(--color-brand-ink);
+  --fg-pop-muted: #5f524d;
+  --line-base: rgb(250 245 234 / 0.14);
+  --line-pop: rgb(42 32 30 / 0.12);
+
+  --glow: 174 42 38; /* rgb del acento, para sombras y degradados */
+  --accent-text: #e2c98c; /* acento legible sobre fondos oscuros */
+  --flame-1: #ecd49a;
+  --flame-2: #d6b25e;
+  --flame-3: #e9a58a;
+
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg-base: #faf6ee;
+  --bg-base-alt: #ffffff;
+  --bg-base-raised: #ffffff;
+  --bg-pop: #221a19;
+  --accent-text: #a42622;
+  --fg-base: var(--color-brand-ink);
+  --fg-base-muted: #6b5d57;
+  --fg-pop: var(--color-brand-ivory);
+  --fg-pop-muted: var(--color-brand-ivory-muted);
+  --line-base: rgb(42 32 30 / 0.1);
+  --line-pop: rgb(250 245 234 / 0.14);
+  color-scheme: light;
+}
+
+@theme {
+  --font-display: "Montserrat", "Arial Black", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-black: var(--color-brand-black);
+  --color-ink: var(--color-brand-ink);
+  --color-red: var(--color-brand-red);
+  --color-red-dark: var(--color-brand-red-dark);
+  --color-ivory: var(--color-brand-ivory);
+  --color-ivory-dim: var(--color-brand-ivory-dim);
+  --color-ivory-muted: var(--color-brand-ivory-muted);
+  --color-gold: var(--color-brand-gold);
+  --color-gold-soft: var(--color-brand-gold-soft);
+
+  --color-band: var(--band-bg);
+  --color-band-raised: var(--band-bg-raised);
+  --color-band-fg: var(--band-fg);
+  --color-band-fg-muted: var(--band-fg-muted);
+  --color-band-line: var(--band-line);
+
+  --color-base: var(--bg-base);
+  --color-base-alt: var(--bg-base-alt);
+  --color-base-raised: var(--bg-base-raised);
+  --color-pop: var(--bg-pop);
+  --color-fg-base: var(--fg-base);
+  --color-fg-base-muted: var(--fg-base-muted);
+  --color-fg-pop: var(--fg-pop);
+  --color-fg-pop-muted: var(--fg-pop-muted);
+  --color-line-base: var(--line-base);
+  --color-line-pop: var(--line-pop);
+  --color-accent: var(--accent-text);
+
+  --shadow-card: 0 12px 32px -14px rgb(0 0 0 / 0.4);
+  --shadow-red-glow: 0 18px 40px -16px rgb(var(--glow) / 0.5);
+
+  --animate-marquee: marquee-scroll 32s linear infinite;
+  --animate-spin-slow: spin 70s linear infinite;
+  --animate-float: float-logo 6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  --animate-orb: orb-drift 14s ease-in-out infinite;
+  --animate-orb-slow: orb-drift 22s ease-in-out infinite reverse;
+  --animate-pulse-ring: pulse-ring 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* ---------- Wok Express: marca propia (negro / rojo / dorado) ----------
+   Se redeclaran también los tokens --color-* porque Tailwind los resuelve
+   en :root; sin esto el override no llegaría a las utilidades. */
+[data-brand="wok"] {
+  --color-brand-black: #000000;
+  --color-brand-ink: #1a1410;
+  --color-brand-red: #e61611;
+  --color-brand-red-dark: #b4110d;
+  --color-brand-ivory: #f7f2e1;
+  --color-brand-ivory-dim: #eae1c8;
+  --color-brand-ivory-muted: #c9c2ae;
+  --color-brand-gold: #f4a234;
+  --color-brand-gold-soft: #f8be6c;
+
+  --color-black: #000000;
+  --color-ink: #1a1410;
+  --color-red: #e61611;
+  --color-red-dark: #b4110d;
+  --color-ivory: #f7f2e1;
+  --color-ivory-dim: #eae1c8;
+  --color-ivory-muted: #c9c2ae;
+  --color-gold: #f4a234;
+  --color-gold-soft: #f8be6c;
+
+  --color-band: #000000;
+  --color-band-raised: #141210;
+  --color-band-fg: #f7f2e1;
+  --color-band-fg-muted: #c9c2ae;
+  --color-band-line: rgb(247 242 225 / 0.14);
+
+  --color-base: #0a0908;
+  --color-base-alt: #141210;
+  --color-base-raised: #1c1917;
+  --color-pop: #f7f2e1;
+  --color-fg-base: #f7f2e1;
+  --color-fg-base-muted: #c9c2ae;
+  --color-fg-pop: #1a1410;
+  --color-fg-pop-muted: #5c5344;
+  --color-line-base: rgb(247 242 225 / 0.14);
+  --color-line-pop: rgb(26 20 16 / 0.12);
+
+  --glow: 230 22 17;
+  --color-accent: #ff5b47;
+  --flame-1: #e61611;
+  --flame-2: #ff5b47;
+  --flame-3: #f4a234;
+  --shadow-red-glow: 0 18px 40px -16px rgb(230 22 17 / 0.5);
+  color-scheme: dark;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float-logo {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes orb-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(40px, -30px, 0) scale(1.12);
+  }
+  66% {
+    transform: translate3d(-30px, 24px, 0) scale(0.94);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgb(var(--glow) / 0.5);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 16px rgb(var(--glow) / 0);
+  }
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes shine-sweep {
+  from {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  to {
+    transform: translateX(260%) skewX(-18deg);
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes border-spin {
+  to {
+    --angle: 360deg;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-base text-fg-base font-body antialiased;
+  /* Los reveals laterales parten fuera de pantalla: nunca deben generar scroll horizontal */
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-brand-red);
+  color: var(--color-brand-ivory);
+}
+
+/* Foco visible para teclado (WCAG 2.2) */
+:focus-visible {
+  outline: 3px solid var(--color-brand-gold);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@layer utilities {
+  .text-gradient-flame {
+    background: linear-gradient(90deg, var(--flame-1) 0%, var(--flame-2) 55%, var(--flame-3) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-shift 6s ease infinite;
+  }
+
+  .photo-overlay {
+    position: relative;
+  }
+  .photo-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(var(--glow) / 0.06) 0%, rgb(0 0 0 / 0.3) 100%);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+  .photo-overlay-strong::after {
+    background: linear-gradient(180deg, rgb(var(--glow) / 0.1) 0%, rgb(0 0 0 / 0.42) 100%);
+  }
+
+  .hairline {
+    border-color: var(--color-line-base);
+  }
+
+  /* Greca (meandro) del logo como remate decorativo */
+  .greca-strip {
+    height: 14px;
+    opacity: 0.55;
+    background-repeat: repeat-x;
+    background-size: 28px 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14' fill='none' stroke='%23c9a34c' stroke-width='2'%3E%3Cpath d='M0 12.5h4V1.5h16v9h-10v-5h5v1M20 1.5h8'/%3E%3C/svg%3E");
+  }
+
+  /* Tarjeta que se eleva y brilla al pasar el cursor */
+  .card-lift {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s, border-color 0.4s;
+  }
+  .card-lift:hover {
+    transform: translateY(-8px);
+    border-color: rgb(var(--glow) / 0.55);
+    box-shadow: 0 24px 48px -20px rgb(var(--glow) / 0.45);
+  }
+
+  /* Barrido de luz en botones */
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.35), transparent);
+    transform: translateX(-120%) skewX(-18deg);
+    pointer-events: none;
+  }
+  .btn-shine:hover::after {
+    animation: shine-sweep 0.9s ease;
+  }
+
+  /* Borde con degradado giratorio (navbar futurista) */
+  .glow-border {
+    position: relative;
+  }
+  .glow-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border-radius: inherit;
+    background: conic-gradient(from var(--angle), transparent 0 55%, var(--color-brand-gold) 75%, var(--color-brand-red) 90%, transparent 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    animation: border-spin 6s linear infinite;
+    pointer-events: none;
+    opacity: 0.85;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
