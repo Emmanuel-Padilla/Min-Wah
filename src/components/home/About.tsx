@@ -32,7 +32,10 @@ export function About() {
           <Eyebrow>{t("about_eyebrow")}</Eyebrow>
           <h2 className="mb-4 font-display text-[clamp(2.25rem,1.8rem+2vw,3.25rem)] font-extrabold leading-[1.12] tracking-[-0.01em]">{t("about_title")}</h2>
           <p className="mb-3 text-lg text-fg-base-muted">{t("about_body_1")}</p>
-          <p className="text-lg text-fg-base-muted">{t("about_body_2")}</p>
+          <p className="mb-3 text-lg text-fg-base-muted">{t("about_body_2")}</p>
+          <p className="mb-3 text-lg text-fg-base-muted">{t("about_body_3")}</p>
+          <p className="mb-3 text-lg text-fg-base-muted">{t("about_body_4")}</p>
+          <p className="text-lg font-semibold text-fg-base">{t("about_body_5")}</p>
           <dl className="mt-8 grid grid-cols-3 gap-3">
             {[
               { n: 32, s: "", k: "about_stat_years" as const },
